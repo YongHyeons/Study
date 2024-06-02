@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>시맨틱 태그와 구분 태그</title>
+		
+		<link href="/20240528/index.css" rel="stylesheet">
+		
+		<style>
+			/* style 태그에 작성하는 방식 -> internal */
+			/* 스타일 태그는 그 용도가 매우 명확 */
+			/* 이미 만들어진 태그를 꾸미기위한 용도의 태그 그리고 기능 */
+			/* style 태그를 대신하기위한 외부의 파일을 읽어오는 기능 -> css -> custom style sheet */
+			span /* Selector - 선택자 */ 
+			{
+				/* background-color:rgb(255,0,0); */ /* 꾸미는 정보 - Style */
+			}
+		</style>
+	</head>
+	<body>
+		<!-- 1000001 오늘은 매우 덥다 LYH 24/05/28 -->
+		<!-- 정보를 구분짓기위한, 정보를 다른 구조에 포함시키기위한 태그 -->
+		<!-- 구분 태그 -->
+		<!-- 1. span -->
+		<span>1000001</span>
+		<span>오늘은 매우 덥다</span>
+		<span>LYH</span>
+		<span>24/05/28</span>
+		<!-- 단순하게 내용물만 구분짓기 위한 태그가 아닌 -->
+		<!-- 서로의 영역도 구분짓기 위한 태그 -->
+		<!-- 영역을 네모난 모양으로 차지하기 위해 다른 영역과 동일한 선상에 존재하지 ㅇ낳는다 -->
+		<!-- 2. div -->
+		<div>1000001</div>
+		<div>오늘은 매우 덥다</div>
+		<div>LYH</div>
+		<div>24/05/28</div>
+		
+		<!-- 시맨틱 태그가 HTML5부터 추가되었다 -->
+		<!-- div, span 처럼 구분을 짓기위한 태그를 만들었다 -->
+		<!-- 단, 기능상의 변경은 없고 이름만 달라진 것들이 추가 되었다 -->
+		<!-- 그렇기에 기능은 동일하게 이용하는데 역할을 구분지을 수 있게 되었다 -->
+		<header>헤더 정보</header>
+		<nav>네이게이션 정보</nav>
+		<footer>푸터 정보</footer>
+		<main>메인 정보</main>
+		<section>섹션 정보</section>
+		<article>아티클 정보</article>
+		<aside>사이드 정보</aside>
+		
+		<!-- 시맨틱 태그 까지 배운다면 -->
+		<!-- 일반적으로 사용할 수 잇는 모든 태그를 배운다 -->
+		
+		<!-- var, samp, kbd, code -->
+		<var>5</var>
+		<samp>샘플</samp>
+		<kbd>kbd</kbd>
+		<code>코드</code>
+		
+		<!-- canvas -->
+		<canvas></canvas>
+		
+		<!-- ruby, rp, rt -->
+		<ruby>내용을 작성한 다음<rt>후리가나</rt></ruby>
+		
+		<!-- abbr -->
+		<div>어떠한 <abbr title="내용을 설명하기위한 속성값">내용</abbr>을 적을때</div>
+		
+		<!-- wbr -->
+		<!-- 단어 개행 구간 -->
+		<div>무언가 내용을 적는다면 해당 내용이 길어지는 경우가 매우 많다<wbr/>무언가 내용을 적는다면 해당 내용이 길어지는 경우가 매우 많다</div>
+		
+		<!-- details, summary -->
+		<details>
+			<summary>요약본</summary>
+			전부 보여주고 싶은 내용 전부 보여주고 싶은 내용 전부전부 보여주고 싶은 내용 전부 보여주고 싶은 내용 전부전부 보여주고 싶은 내용 전부 보여주고 싶은 내용 전부
+		</details>
+		
+		<!-- template -->
+		<template>
+			이 안에 무엇을 적던
+			<img/>
+			<video>	<source/>
+			어떤 태그를 이용하던
+			</video>
+			상관없이 안나온다
+		</template>
+	</body>
+</html>
