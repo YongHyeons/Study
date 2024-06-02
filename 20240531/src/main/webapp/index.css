@@ -1,0 +1,122 @@
+@charset "UTF-8";
+
+*{}
+
+/* Layout 의 가장 기본이 되는 속성 -> display */
+/*
+body > div:nth-child(1){
+	display:inline;
+	background-color:red;
+}
+body > div:nth-child(2){
+	display:inline-block;
+	width:20%;
+	background-color:orange;
+}
+body > div:nth-child(3){
+	display:block;
+	background-color:yellow;
+}
+*/
+/*
+body > div:nth-child(4){
+	background-color:green;
+	display:none; /* 영역도 차지하지않음 */
+	/* opacity:0; */
+	/* visibility:hidden;}*/
+
+/*
+body > div:nth-child(5){
+	display:block;
+	background-color:blue;
+}
+*/
+
+/* inline, inline-block, block, none 네개의 display 속성은 자기 자신을 대상으로하는 속성 */
+/* 추가적으로 나온 display 속성은 자기 자신을 대상으로 하지 않고 태그 내부에 속한 내용물들을 대상으로 */
+/* 여러개의 태그들의 레이아웃을 일괄 적용하고 제어한다 -> 그룹 레이아웃 속성 */
+/* 그룹 레이아웃 속성은 div 기반 */
+/* 그룹 레이아웃을 쓰고는 싶은데 inline처럼 이용하고 싶다
+/* flex, inline-flex */
+#flex{
+	/* width, height로 직접 지정한 크기의 한계를 벗어나서 더 커지거나 작아지도록 하는 속성 */
+	/* 한줄에 모든것을 강제로 삽입하다보니 디자인이 뭉개진다 */
+	/* 뭉개지지 않도록 한줄로 나오지 않도록 추가적으로 제어하기위한 속성 */
+	display:flex;
+	/*
+	flex-direction: column;
+	flex-wrap:wrap-reverse;
+	*/
+	flex-flow:row-reverse wrap-reverse;
+	/* 공백을 제어하기위한 추가 제어 기법 */
+	/* flex-start - 시작, flex-end - 끝, center - 중앙 */
+	/* space-between, space-around - 공백을 적절히 분배해*/
+	/* 단순히 위치 이동이 아닌 크기를 늘리고 줄이고 싶을때 - stretch  */
+	/* justify-content:space-around; */
+	/* align-items: flex-end; */
+	/* align-content: flex-start; */
+	/* 두개의 축 -> main axis, sub axis */
+	/* justtify -> main axis sort, align -> sub axis sort */
+	
+	width:8rem;
+	height:8rem;
+	background-color:rgb(230,230,220);
+}
+#flex > div{
+	/* 개개의 내부 태그들에게 늘리는 비율을 지정해줘야 늘어난다 */
+	/* flex-basis: 2rem; */
+	/* 2rem + 1, 2rem + 1, 2rem + 2 */
+	/* 성장율 */
+	flex-grow:1;
+	/* flex-shrink:; */
+	width:2rem;
+	height:2rem;
+	border: 1px rgb(185, 175, 190) solid;
+}
+#flex > div:first-child{
+	flex-grow:2;
+}
+
+/* flex 의 단점 - 여러줄을 한번에 제어하는 태그를 만들수 없다는 */
+
+
+/* grid, inline-grid */
+
+#grid {
+	display:grid;
+	/* 바둑판을 만드는 레이아웃 속성 */
+	/* grid-template-rows : 1fr 1fr; */
+	grid-template-columns: repeat(auto-fill, minmax(10rem, auto));
+	/* grid-auto-flow:column dense; */
+	/* 만약에 바둑판을 벗어난 경우 크기를 수동 지정 */
+	
+	/* grid-auto-rows:150px; */	
+	/* grid-auto-columns:150px; */
+	gap:5px;	
+}
+
+#grid > div{
+	border:1px rgb(230,240,235) solid;
+}
+
+#grid > div:first-child{
+	/*
+	grid-row-start:1;
+	grid-row-end:span 2;
+	grid-column-start:1;
+	grid-column-end:span 2;
+	*/
+	grid-area:span 2 / span 2;
+}
+
+
+
+
+
+
+
+
+
+
+
+

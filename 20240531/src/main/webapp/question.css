@@ -1,0 +1,161 @@
+@charset "UTF-8";
+
+*{
+	margin:0;
+}
+/*
+	rgb(7, 197, 89), 뉴스스탠드 이미지 hover, visiblity
+*/
+/* --------------------------------------------------------------------------------------------------------- */
+
+header
+{	
+	/* 헤더 아래 테두리 */
+	border-bottom:2px rgb(240, 250, 245) solid;
+	/* rgb(7, 197, 89) */
+}
+
+.container
+{
+	/* 가운데 정렬, 로고 라인 상하단 공백, 가로 사이즈  */
+	margin:auto;
+	margin-bottom:1rem;
+	margin-top:1rem;
+	width:80vw;
+}
+
+.container > span
+{
+	/* 로고 폰트 */
+	font-family:Vladimir Script;
+	font-size:1.6rem;
+}
+
+/* --------------------------------------------------------------------------------------------------------- */
+
+
+/* --------------------------------------------------------------------------------------------------------- */
+.profile
+{
+	/* 프로필 영역 설정 */
+	display:flex;
+}
+
+.profile .image
+{
+	/* 프로필 사진부분 비율 및 사진을 감싸는 div 가운데 정렬 */
+	flex-grow:4;
+	display:flex;
+	justify-content:center;
+}
+
+.profile div.text
+{	
+	/* 프로필 텍스트부분 비율 */
+	flex-grow:6;
+}
+
+.profile .image div
+{
+	/* 이미지 들어갈 div 원형으로 만들고 크기 설정 넘치는건 없앤다 */
+	width:10rem;
+	height:10rem;
+	border-radius:50%;
+	overflow:hidden;
+}
+
+.profile .image img
+{
+	/* 들어가는 프로필 이미지 */
+	width:100%;
+	height:100%;
+	object-fit:cover;
+}
+
+.profile div.text .id
+{
+	
+	font-size:1.4rem;
+}
+ 
+.profile div.text .info
+{
+	margin-top:1rem;
+	margin-bottom:1rem;
+}
+
+.profile div.text .info span
+{
+	font-size:1.2rem;
+}
+
+.profile div.text .info span.text
+{
+	font-size:1.1rem;
+	margin-right:1.1rem;
+}
+
+.profile div.text .contact
+{
+	font-size:1.2rem;
+	line-height:1.7rem;
+}
+
+.profile div.text .contact :first-child
+{
+	font-size:1.2rem;
+	font-weight:800;
+}
+
+/* --------------------------------------------------------------------------------------------------------- */
+
+main .buttons_outer
+{
+	margin-top:2rem;
+	border-top: 2px rgb(240,250,245) solid;
+}
+
+main .buttons
+{
+	width:40%;
+	display:grid;
+	margin:auto;
+	grid-template-columns:repeat(3, 1fr);
+}
+
+main .buttons div
+{
+	text-align:center;
+}
+
+main .buttons div:hover
+{
+	border-top: 2px rgb(145,135,140) solid;
+}
+
+/* --------------------------------------------------------------------------------------------------------- */
+
+main .images
+{
+	display:grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap:2rem;
+}
+
+main .images div
+{
+	width:100%;
+	height:30rem;
+	overflow:hidden;
+}
+
+main .images img
+{
+	width:100%;
+	height:100%;
+	object-fit:cover;
+}
+
+
+
+/* --------------------------------------------------------------------------------------------------------- */
