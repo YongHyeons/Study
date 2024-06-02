@@ -1,0 +1,211 @@
+@charset "UTF-8";
+
+/* 디자인 CSS를 배우기 전에 제일 먼저 배워야하는 CSS */
+/* 크기를 변경하기위한 속성을 제일 먼저 배워야 한다 */
+
+/* 내가 선택한 대상의 크기를 수정하는 속성 -> width, height */
+
+body > div
+{
+	width:20vw;
+	height:20vw;
+	position:relative;
+	
+}
+
+body > div:nth-child(2) > div
+{
+	width:14vw;
+	height:10vw;
+}
+body > div:nth-child(3) > img
+{
+	width:20vw;
+	height:15vw;
+}
+
+body > div:first-child
+{
+	/* Snake Case */
+	background-color:red;
+	/* Camel Case */
+	/* backgroundColor */
+	/* 빼기 뒤에 오는 글자를 대문자로 변경하는 방법 */
+}
+
+body > div:nth-child(2) > div:first-child
+{
+	/* 배경에 생상 대신 이미지를 넣겠다 */
+	/* 이미지가 배경에 들어갈때 배경 크기와 이미지 크기가 다른 경우는 매우 빈번 */
+	background-image: url("/20240530/대피소.svg");
+	/* 배경에 이미지가 올바르게 자리잡도록 추가적인 옵션이 필요하다 */
+	/* background-repeat, background-size, background-position */
+	/* 정확한 이미지의 크기가 아닌 위에 상위 태그 크기의 일부분이 되도록하는 키워드*/
+	/* 공백 한쪽을 메꿀때까지 */
+	background-size: contain;
+	/* background-size: cover; */
+	/* no-repeat*/
+	/* 특정 방향만 반복할 수 있도록 */
+	/* repeat-x, repeat-y */
+	background-repeat: no-repeat;
+}
+body > div:nth-child(2) > div:last-child
+{
+	background-image: url("/20240530/big.png");
+	/* 모든 공백을 메꿀때까지 */
+	/* background-size: contain; */
+	background-repeat: no-repeat;
+	/* left, right, bottom, top, center */
+	/* 배경 이미지의 위치를 잡는것 -> 매우 색다른 옵션도 존재 */
+	/* left, right, bottom, top, center */
+	background-position: right 20px top 20px;
+}
+
+body > div:nth-child(3) > img
+{
+	object-fit:cover;
+}
+
+body > div:nth-child(4)
+{
+	/* 배경에 이미지를 넣을때 이미 준비된 이미지가 아니라 내가 이미지를 그릴 수 있도록 하는 기능 */
+	/* 각도가 단순히 deg 각도만 존재하지 않는다 */
+	/* to left, to right 같이 특정 글자로 각도를 지정할 수 있도록 */
+	/* background-image:linear-gradient(45deg, red, blue, yellow); */
+	/* 그라디언트 종류 conic(원뿔), radial, linear */
+	/* background-image:linear-gradient(to left, rgba(255,0,0,0) 20%, rgb(0,0,255) 50%, rgb(0,255,0)); */
+	/* background-image: conic-gradient(red 50deg , blue, yellow, green); */
+	/* reaial chart */
+	background-image: radial-gradient(red, blue);
+}
+
+/* 배경과 관련된건 대충 다 배운것 같다 */
+/* 이미지 태그를 조절하는 방법 -> 태그의 위치를 조절하는 방법 */
+/* 기본적으로 모든 태그는 위치 이동이 불가능하도록 만들어져 있다 */
+
+body > div > div.item
+{
+	width:10vw;
+	height:10vw;
+}
+
+body > div > div.item:nth-child(1)
+{ background-color:red; }
+body > div > div.item:nth-child(2)
+{ background-color:orange; }
+body > div > div.item:nth-child(3)
+{ background-color:yellow; }
+body > div.item
+{ background-color:green; }
+
+body > div > div.item:nth-child(1)
+{
+	/* positiondl 여러종류가 존재 */
+	/* relative */
+	/* absolute */
+	/* fixed */
+	/* sticky */
+	position: relative;
+	/* 원래 있을 위치로부터 이동 */
+	left:50px;
+	/* 위치 이동을할때 단순히 어느 위치로 이동해라는 힘든 구조 */
+}
+body > div > div.item:nth-child(2)
+{
+	/* 내 상위 태그중 가장 가까운 position:relative 태그의 위치로부터 절대좌표 */
+	position: absolute;
+	left:500px;
+	top:50px;
+}
+body > div > div.item:nth-child(3)
+{
+	/* fix -> 고정하다 */
+	position: fixed;
+	top:200px;
+	right:50px;
+}
+body > div.item
+{
+	/* 스크롤이 존재하는 화면에서 더이상 넘어가지 못하게 하는 기능 */
+	position: sticky;
+	top:20px;
+}
+
+body > div:nth-child(7)
+{
+	background-color:crimson;
+}
+
+body > div:nth-child(7) > div
+{
+	/* float -> 떠있는 */
+	/* left, right */
+	float:left;
+}
+body > div:nth-child(7) > p
+{
+	/* float 속성에 영향을 받지 않도록하는 옵션 */
+	clear:both;
+}
+
+/* 내용물을 감싸는 선이 많은 용도로 이용된다 */
+body > div:nth-child(8)
+{
+	/* 내용물을 감싸는 선 -> 외곽선 */
+	/* 총괄 옵션 */
+	/* border: 2px black solid; */
+	/* 0px black solid */
+	/* 외곽선 두께 색상 스타일 */
+	border-width: 3px;
+	border-color: black;
+	border-style: solid;
+	
+	border-radius: 5%;
+	padding : 50px 20px;
+	padding-left: 200px;
+	
+	margin: 50px;
+	
+	/* box-sizing -> width, height 크기가 어떤 기준이냐 */
+	/* content-box -> with */
+	/* border-box -> with + border + padding */
+	box-sizing: border-box;
+	
+	/*
+	border-radius: 20px;
+	border-radius: x / y;
+	border-radius: x1 x2 / y1 y2;
+	border-radius: x1 x2 x3 x4 / y1 y2 y3 y4;
+	border-bottom-radius:;
+	border-bottom; 
+	*/
+	
+	/* 내부에 있는 내용물이 넘치는순간 어떻게 처리할지 지정하는 속성 */
+	/* overflow:hidden */
+	/* overflow:scroll */
+	overflow:visible;
+	
+	z-index:50;	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
