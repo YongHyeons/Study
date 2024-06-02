@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+	<title>HTML 태그 수업</title>
+	</head>
+	<body>
+		<!-- 이상태에서 수업 시작 -->
+		<!-- 연관성이 있는 정보들을 묶어서 구조화하기 위한 태그 -->
+		<!-- Relational Tag -->
+		<!-- 1. list tag -->
+		<!-- 이름 그대로 정보들을 목록화하는 태그 -->
+		<!-- 밑에 적힌 내용처럼 번호 또는 순서대로 정보들을 나열하는 구조화 태그 -->
+		<!-- 연관성 구조화 태그는 역할상 단순히 태그를 적는것 만으로도 문제가 있다 -->
+		<!-- 태그가 두개가 필요 -->
+		<!-- 외부 태그와 내부 태그 2종류가 있어야 구조화한 후 이용이 가능하다 -->
+		<!-- ul -> unordered list, li -> list item -->
+		<!-- ol -> odered list -->
+		<!-- list 태그에는 해당 리스트를 꾸미기 위한 속성값도 존재 -->
+		<!-- reversed -> 역순, start -> 시작 번호, type -> 형식 -->
+		<ul type="none">
+			<li>냄비 준비</li>
+			<li>물 담기</li>
+			<li>물 끓이기</li>
+			<li>라면 스프 넣기</li>
+			<li>라면 면 넣기</li>
+			<li>그릇에 옮겨 담기</li>
+		</ul>
+		
+		<!-- definition list -->
+		<!-- list에서 한단계 발전한 제목을 포함한 list가 필요해졌다 -->
+		<!-- 정의된 목록 -->
+		<!-- unordered list -> ul 된것 처럼 -->
+		<!-- definition lsit -> dl, definition title -> dt, definition description dd -->
+		<dl>
+			<dt>라면 끓이는 법</dt>
+				<dd>
+					<ol>
+						<li>냄비 준비</li>
+						<li>물 담기</li>
+						<li>물 끓이기</li>
+						<li>라면 스프 넣기</li>
+						<li>라면 면 넣기</li>
+						<li>그릇에 옮겨 담기</li>
+					</ol>
+				</dd>
+			<dt>제목2</dt>
+				<dd>내용물2</dd>
+			<dt>제목3</dt>
+				<dd>내용물3</dd>
+		</dl>
+		
+		<!-- table tag -->
+		<!-- 위 아래로 늘어지는 리스트 형식의 태그는 좋긴한데 한눈에 파악이 어렵다 -->
+		<!-- 가로세로를 통해 한칸씩의 정보를 표현하기 위한 정보 세팅 -> 테이블 -->
+		<!-- 필요한 태그는 3개인데 실제 태그는 4개 -->
+		<!-- table -> 전체 태그, tr -> table row 한줄 태그 -->
+		<!-- th, td -> table head, table description 한칸 태그 -->
+		<table>
+			<tr>
+				<th>제목1</th>
+				<th>제목2</th>
+			</tr>
+			<tr>
+				<td>내용01</td>
+				<td>내용02</td>
+				<td>내용03</td>
+			</tr>
+			<tr>
+				<td>내용11</td>
+				<td>내용12</td>
+				<td>내용13</td>
+			</tr>
+		</table>
+		
+		<!-- 테이블을 손쉽게 확인하기위한 태그들이 존재 -->
+		<!-- border - 외곽선, 전체 외곽선의 굵기를 지정하면서 외곽선을 켜는 용도-->
+		<!-- width, height - 크기 -->
+		<!-- cellspacing, cellpadding -> 공백 지정-->
+		<!-- spacing -> 사이 gap, padding -> 외곽 gap -->
+		
+		<!-- 테이블의 한칸을 합쳐서 여러칸처럼 보이게 하는 기능 -->
+		<!-- colspan, rowspan -> 크기 기능 -->
+		<table border="1" width="500px" height="500px" cellspacing="0px" cellpadding="0px">
+			<tr>
+				<th></th>
+				<th>서울</th>
+				<th>부산</th>
+				<th>미정</th>
+			</tr>
+			<tr>
+				<th>서울</th>
+				<td colspan="2">0</td>
+				<td rowspan="2"></td>
+			</tr>
+			<tr>
+				<th>부산</th>
+				<td>30000</td>
+				<td>0</td>
+			</tr>
+		</table>
+		
+		<!-- 라면 요리법을 4개 표시 -->
+		<!-- 각 라면요리법 위에는 어떤 라면 요리법인지 제목 명시 -->
+		<!-- 각 라면 요리법은 순서대로 작성되어야함 -->
+		<!-- 각 라면 요리법의 첫번째 순서로는 필요 재료를 표형식으로 보여줘야함 -->
+		
+		<dl>
+			<dt>
+				신라면
+			</dt>
+				<dd>
+					<ol>
+						<li>
+							<table border="1" cellspacing="0px" cellpadding="5px">
+								<tr>
+									<th>재료</th>
+									<td>신라면</td>
+									<td>물(550ml)</td>
+									<td>파</td>
+									<td>계란</td>
+								</tr>
+							</table>
+						</li>
+						<li>물을 끓인다</li>
+						<li>면을 넣는다</li>
+						<li>분말 스프와 취향에 따라 건더기 스프를 넣는다</li>
+						<li>3~4분 정도 기다린다</li>
+						<li>저어서 맛있게 먹는다</li>
+					</ol>
+				</dd>
+			
+			<dt>
+				짜파게티
+			</dt>
+				<dd>
+					<ol>
+						<li>
+							<table border="1" cellspacing="0px" cellpadding="5px">
+								<tr>
+									<th>재료</th>
+									<td>짜파게티</td>
+									<td>물(550ml)</td>
+								</tr>
+							</table>
+						</li>
+						<li>물을 끓인다</li>
+						<li>면과 건더기 스프를 넣는다</li>
+						<li>면을 그릇에 건져낸다</li>
+						<li>남은 면수는 버리지 말고, 스프가 뭉치지 않게 풀릴 수 있을 정도로 그릇에 따른다</li>
+						<li>스프를 섞는다</li>
+						<li>별첨된 올리브유로 면을 버무린다</li>
+						<li>맛있게 먹는다</li>
+					</ol>
+				</dd>
+			
+			<dt>
+				팔도비빔면
+			</dt>
+				<dd>
+					<ol>
+						<li>
+							<table border="1" cellspacing="0px" cellpadding="5px">
+								<tr>
+									<th>재료</th>
+									<td>팔도비빔면</td>
+									<td>물(550ml)</td>
+								</tr>
+							</table>
+						</li>
+						<li>물을 끓인다</li>
+						<li>끓는 물 600ml에 면을 3분동안 익힌다</li>
+						<li>찬물에 면을 헹군다.</li>
+						<li>양념장 소스에 비벼 먹는다</li>
+					</ol>
+				</dd>
+		</dl>
+		
+		<!-- input tag -->
+		<!-- 사용자의 입력을 받고 그로 인해 변화하는 페이지 -> 동적 페이지 -->
+		<!-- 동적 페이지를 위해서 만들어진 태그 -> 입력 태그 -->
+		
+		<input/>
+		
+		<!-- 입력 태그는 추가적인 태그들의 혼합으로 표현된다 -->
+		<!-- 1. form tag -->
+		<!-- 형식을 표현하는 태그 -->
+		<!-- form에는 선택이 아닌 필수 속성이 존재 -->
+		<!-- action -> 서버에 전달할 경로 -->
+		<!-- method -> 함수를 의미 -->
+			<!-- get, post, delete, update, ... -->
+			<!-- 일반적으로는 get과 post만 이용 -->
+		<!-- target -> 페이지 이동 지정 속성 -->
+		<!-- enctype -> 인코딩 타입 -->
+		<!-- multipart/form-data -> post방식만 이용이 가능하다 -->
+		<!-- application/x-www-form-urlencoded -->
+		<form action="/20240527/a.html" method="get" target="_self" enctype="application/x-www-form-urlencoded">
+			<!-- input tag -->
+			<!-- 여러가지 입력에 대응하도록 type이 존재한다 -->
+			<!-- 여러가지 속성값 -->
+			<!-- 필수 속성과 선택 속성 -->
+			<!-- 필수 속성-->
+				<!-- name -> 이름 -->	
+			<!-- 선택 속성 -->
+				<!-- required -> 필수 여부를 지정하는 속성 -->
+				<!-- value -->
+				<!-- autofocus -> 기본적으로 바라보고 있을지 지정하는 속성 -->
+				<!-- placeholder -> 해당 입력창에 힌트 -->
+				<!-- disabled -> 비활성화 -->
+				<!-- readonly -> 읽기 전용 여부-->
+				<!-- maxlength, minlength -> 글자형일때 최대 혹은 최소 몇글자일지 -->
+				<!-- min, max -> 숫자형일때 얼마씩 변화할지 -->
+				<!-- step -> 숫자형일때 얼마씩 변화할지 -->
+				<!-- checked -> checkbox나 radio일때 해당 대상이 체크중인지 여부 -->
+			<input type="email" name="emailinput"/>	
+			<input type="color"/>	
+			<input type="text"/>	
+			<input type="datetime"/>	
+			<input type="datetime-local"/>	
+			<input type="image"/>	
+			<input type="file"/>	
+			<input type="button"/>	<!-- 클릭시 무언가 동작을 위한 버튼 -->	
+			<input type="submit"/>	<!-- 제출용 버튼 -->
+			<input type="checkbox"/>	
+			<input type="password"/>	
+			<input type="range"/>	
+			<input type="number"/>	
+			<input type="url"/>	
+			<input type="radio"/>	
+			
+			<!-- 단순한 input 태그가 아닌 전용으로 따로 뽑혀나온 태그들도 있다 -->
+			<!-- textarea -->
+			<!-- rows, cols - 글 가로, 세로 길이 지정 -->
+			<!-- wrap - soft, hard로 줄이 가로 끝에 도당하면 엔터를 어떤 방식으로 칠지 -->
+			<textarea></textarea>
+			
+			<!-- button -->
+			<!-- type -> submit, button, reset -->
+			<button>버튼 내용</button>
+			
+		</form
+		>
+		<form>
+			<!-- 여러개의 태그가 필요할법한 드랍다운 같은 태그도 뽑혀 나왔다 -->
+			<!-- 드랍다운을 위한 태그 - select, datalist -->
+			<!-- size -> 한번에 보여주는 드랍다운 개수 -->
+			<!-- multiple -> 여러개르 한번에 선택이 가능한지 여부 -->
+			<select>
+				<optgroup lable="제목">
+					<option value="값">드랍다운 내용물 1</option>
+					<option selected>드랍다운 내용물 2</option>
+				</optgroup>
+			</select>
+			<input type="text" list="datalist_1"/>
+			<datalist id="datalist_1">
+					<option>드랍다운 내용물 1</option>
+					<option>드랍다운 내용물 2</option>
+			</datalist>
+		</form>
+		
+		<!-- 라면의 요리법을 입력하는 입력창 -->
+		<!-- 3개의 요리법을 작성하고 전송 -->
+		
+		<form>
+			<fieldset>
+				<label for="1">제목</label>
+				<input id="1"/>
+				<label>제목</label>
+				<input/>
+			</fieldset>
+			<fieldset>
+				<label for="2">제목</label>
+				<input id="2"/>
+				<label>제목</label>
+				<input/>
+			</fieldset>
+		</form>
+		
+		<!--
+			input만이 아닌 지금까지 배운것을 모두 응용해서 만들기
+			요리법 3가지를 보내는 페이지
+			1. 각 요리는 패스트푸드, 국물요리, 구이요리로 나뉨
+			2. 패스트 푸드는 요리 종류(햄버거, 치킨, 라면 등)를 고르고 요리법을 입력
+			3. 국물 요리는 요리 종류(수프, 된장찌개, 김치찌개 등)를 고르고 요리법을 입력
+			4. 구이 요리는 고기 종류(돼지고기, 양고기, 소고기 등)를 고르고 요리법을 입력
+			5. 요리법은 순서대로 1. ~ 2. ~ 식으로 나열되어 있으며 입력이 가능하도록
+			6. 요리법은 최대 6개의 입력이 가능하도록 제작
+			7. 요리법 전부 입력 후 요리 난이도를 숫자로 입력(range)
+			8. 최종적으로 등록 버튼을 추가
+		 -->
+		 <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+		 
+		 
+		 <form>
+		 	<fieldset>
+		 		<legend><b>요리</b></legend>
+		 		
+			 	<fieldset>
+			 		<legend>패스트푸드</legend>
+			 		<select>
+			 			<option>햄버거</option>
+						<option>치킨</option>
+						<option>라면</option>
+			 		</select>
+			 		<dl>
+			 			<dt>요리법</dt>
+			 			<dd>
+			 				<ol>
+			 					<li><input type="text"/></li>
+			 					<li><input type="text"/></li>
+			 					<li><input type="text"/></li>
+			 					<li><input type="text"/></li>
+			 					<li><input type="text"/></li>
+			 					<li><input type="text"/></li>
+			 				</ol>
+			 			</dd>
+			 		</dl>
+			 		
+			 		<label>요리 난이도</label>
+			 		<input type="range" min="0" max="5" step="1"/>
+			 	</fieldset>
+			 	
+			 	<fieldset>
+			 		<legend>국물요리</legend>
+			 		<select>
+			 			<option>수프</option>
+						<option>된장찌개</option>
+						<option>김치찌개</option>
+			 		</select>
+			 		<dl>
+			 			<dt>요리법</dt>
+			 			<dd>
+			 				<ol>
+			 					<li><input type="text"/></li>
+			 					<li><input type="text"/></li>
+			 					<li><input type="text"/></li>
+			 					<li><input type="text"/></li>
+			 					<li><input type="text"/></li>
+			 					<li><input type="text"/></li>
+			 				</ol>
+			 			</dd>
+			 		</dl>
+			 		<label>요리 난이도</label>
+			 		<input type="range" min="0" max="5" step="1"/>
+			 	</fieldset>
+			 	
+			 	<fieldset>
+			 		<legend>구이요리</legend>
+			 		<select>
+			 			<option>돼지고기</option>
+						<option>양고기</option>
+						<option>소고기</option>
+			 		</select>
+			 		<dl>
+			 			<dt>요리법</dt>
+			 			<dd>
+			 				<ol>
+			 					<li><input type="text"/></li>
+			 					<li><input type="text"/></li>
+			 					<li><input type="text"/></li>
+			 					<li><input type="text"/></li>
+			 					<li><input type="text"/></li>
+			 					<li><input type="text"/></li>
+			 				</ol>
+			 			</dd>
+			 		</dl>
+			 		<label>요리 난이도</label>
+			 		<input type="range" min="0" max="5" step="1"/>
+			 	</fieldset>
+		 	
+		 	<button type="submit">등록</button>
+		 	</fieldset>
+		 </form>
+	</body>
+</html>
