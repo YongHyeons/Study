@@ -1,0 +1,67 @@
+<!-- 이 페이지가 html 페이지인것을 알려주는 용도 -->
+<!DOCTYPE html>
+<!-- 이런 모양으로 적어야 하기 때문 -->
+<!-- 이 사이에 적힌 모든 내용은 분석에 영향을 끼치지 않는 주석이 된다 -->
+<!-- DOCTYPE과 html, head, body 네개의 태그만 존재할때 -> 기본형 -->
+<!-- html 태그는 이 태그 안에 정보들이 분석에 사용될 태그다 -->
+<!-- html 태그 바로 안에는 head와 body만 있다 -->
+<!-- 태그의 종류와 속성의 작성법 -->
+<!-- 싱글라인 태그, 멀티라인 태그 -->
+<!-- <tag>, <tag/> =>한줄짜리 태그 => 내부에 무언가를 넣지 않는 태그 -->
+<!--
+<tag>
+	내용물
+	내용물
+	<subtag/>
+	<subtag></subtag>
+</tag>
+=> 여러줄짜리 태그 => 내부에 무언가가 들어있는 태그 
+ -->
+<!-- 태그가 그 자체만으로 의미가 있는경우도 있는데 그렇지 않은경우가 더욱 많다 -->
+<!-- <tag name=value> => 이름에 값을 할당 -->
+<html lang="ko">	<!-- html 태그의 lang이라는 옵션에 ko라는 값을 할당해 -->
+	<!-- head 안에는 무엇이 들어갈 수 있고 어떤 동작을 하는가? -->
+	<head>
+		<!-- meta charset="UTF-8" -->
+		<meta charset="UTF-8">
+		<!-- meta 태그 -->
+		<!-- 보여지는 부분에 대한 구성 -->
+		<!-- meta viewport -->
+		<meta name='viewport' content='width=device-width,initial-scale=1.0'>
+		<!-- meta information -->
+		<!-- 웹페이지의 설명을 표현하는 구성 -->
+		<meta name='title' content='제목'>
+		<meta name='author' content='LYH'>
+		<meta name='description' content='설명문'>
+		<meta name='robots' content='index,follow'>
+		<!-- SEO 검색엔진 최적화 -->
+		<meta name='keywords' content='해시,태그,값이,검색,에사,용되,는것'>
+		<!-- 이 웹페이지의 저작권 소유자 -->
+		<meta name='copyright' content="kafolio.kr">
+		
+		<!-- 보여주기 위한 meta information -->
+		<!-- Open Graph information -->
+		<!-- Twitter information -->
+		
+		<!-- twitter -->
+		<meta name='twitter:card' value='카드이름'>
+		<meta name='twitter:image' value='이미지경로'>
+		<meta name='twitter:title' value='제목'>
+		<meta name='twitter:description' value='설명'>
+		
+		<!-- open graph 트위터 외 모든 프로그램에서도 경로를 이미지화할 수 있도록 정보를 구성하자 -->
+		<meta name="og:title" content="제목">
+		<meta name="og:type" content="movie">
+		<meta name="og:url" content="https://www.naver.com/">
+		<meta name="og:image" content="https://www.naver.com/a.jpg">
+		<meta name="og:video" content="비디오 링크">
+		<meta name="og:description" content="설명">
+		<title>타이틀 제목</title>
+	</head>
+	<!-- body 안에는 무엇이 들어갈 수 있고 어떤 동작을 하는가? -->
+	<body>
+		글씨
+		<!-- 테스트 문서
+		적고싶은 내용 -->
+	</body>
+</html>
