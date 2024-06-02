@@ -1,0 +1,113 @@
+@charset "UTF-8";
+
+html{
+	font-size:30px;
+}
+
+body{
+	/* 폰트를 변경할때 사용하는 속성 */
+	font-family: Comic Sans MS, Sitka Small, serif, sans-serif, monospace, cursive, fantasy;;
+}
+
+body > div:nth-child(2)
+{
+	/* font-family: inherit; */ /* inherit -> 기본값 */
+	font-family: serif;
+	/* 2번째로 변경할것 -> 크기 */
+	/* 폰트의 크기를 마음대로 조절할 수 있는데 */
+	/* 그냥 숫자만 적어서는 크기 변경이 안된다 */
+	/* 숫자 + 단위 까지 적어야지만 변경이 된다 */
+	/* px, pt, em, rem, %, vh */
+	/* px -> pixel */
+	/* pt -> point */
+	/* vh, vw -> view height, view width */
+	/* % -> percent */
+	/* em -> element */
+	/* rem -> root element */
+	/* rem -> em과 동일한 구조 */
+	/* 바로 위의 속성값 글자 크기의 몇배가 아니라 */
+	/* html 태그의 속성값 글자 크기의 몇배가 되어라 */
+	font-size:2rem;
+	/* normal(300), bold(700) */
+	font-weight:bold;
+	/* normal, italic, oblique */
+	font-style:oblique;
+	
+	/* text-overflow: clip; */
+	
+	/* 속성값이라는게 단순하게 한개만 적는다고 되는것이 있고 */
+	/* 한개만 적는다고 안되는게 따로 존재한다 */
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow:hidden;
+	
+	/* 꾸미기 */
+	/* text-decoration */
+	/* none, underline, overline, line-through */
+	text-decoration:overline;
+	
+	/* 변환 */
+	/* text-transform */
+	/* none, capitalize, uppercase, lowercase */
+	text-transform:capitalize;
+	
+}
+
+body > div{
+	width:20vw;	
+}
+
+div:first-child
+{
+	/* rtl, ltr */
+	direction: rtl;
+	
+	/* 글자 한개의 높이가 아니라 */
+	/* 한 줄의 높이를 만들어주는 기능 */
+	line-height: 4rem;
+	
+	/* 글자 사이의 공백 */
+	letter-spacing:2px;
+	/* 단어 사이의 공백 */
+	word-spacing: 30px;
+	
+	/* 글자가 크기에 가로막힐때 엔터 여부 */
+	/* nowrap - 엔터 안칠거야, normal - 엔터 칠거야*/
+	white-space: nowrap;
+	
+	/* white-space: normal 인 경우 */
+	/* auto - 기기 자동 */
+	/* normal - 단어를 최대한 유지하면서 엔터를 치도록 */
+	/* loose - 조금더 유연하게 */
+	/* anywhere - 어디서든지 */
+	line-break: auto;
+	
+	/* 색을 지정하는 방식 */
+	/* 색 이름 지정 */
+	/* 색상 코드 */
+	/* 색상 함수 */
+	/* 투명도 포함 색상함수 */
+	color:rgba(45,180,0,0.3);
+	
+	
+}
+
+body{
+	line-break:anywhere;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

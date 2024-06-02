@@ -1,0 +1,38 @@
+@charset "UTF-8";
+
+html{ font-size:18px; }
+
+header {
+	font-size:4rem;	
+}
+
+main > div:first-child 
+{
+	font-size:3rem;	
+}
+
+main > article > div:first-child
+{
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+main > article > div:first-child > span
+{
+	text-decoration:underline;
+}
+
+main > article > table tr:nth-child(2) > td
+{
+	color:red;
+}
+
+main > article > table tr:nth-child(4) > td
+{
+	text-decoration:line-through;
+}
+
+main > article > table{
+	text-align:center;
+}

@@ -1,0 +1,38 @@
+@charset "UTF-8";
+
+header {
+	font-size:20px;	
+}
+
+main > article > div
+{
+	font-size:0.8em;
+}
+
+main > article > div > ul > li
+{
+	font-size:0.8em;
+	color:blue;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow:hidden;
+}
+
+main > article > div:nth-child(4) > ul > li:first-child
+{
+	text-decoration:line-through;
+}
+
+main > article > div > ul > li:nth-child(3)
+{
+	color:red;
+}
+
+main > article > div > ul{
+	width:60vw;	
+}
+
+main > article > div > ul > li > span
+{
+	text-decoration:underline;
+}
